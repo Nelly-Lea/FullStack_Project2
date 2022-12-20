@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    
+   
+    <title>sign_up</title>
+</head>
+<body class="registration" >
+   
+    <div class="signup-div">
+        <h1 class="page_title">Sign Up</h1>
+        <!-- <h4>It's free and only takes a minute</h4> -->
+        <form class="form_registration">
+          <label id="test" class="title_label" for="fname_sign_up">First Name</label>
+          <input class="input_field" id="fname_sign_up" type="text" placeholder="" pattern="^\w+" required />
+          <label class="title_label" for="lname_sign_up">Last Name</label>
+          <input class="input_field" id="lname_sign_up" type="text" placeholder="" pattern="^\w+" required />
+          <label class="title_label" for="email_sign_up">Email</label>
+          <input class="input_field" id="email_sign_up" type="email" placeholder="" required pattern="\w+@\w+\.\w+" />
+          <label class="title_label" for="password_sign_up">Password</label>
+          <input class="input_field" id="password_sign_up" type="password" placeholder="" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" />
+          <label class="title_label" for="confirm_password_sign_up">Confirm Password</label>
+          <input class="input_field" id="confirm_password_sign_up" type="password" placeholder=""  /> 
+          <input id="submit_sign_up_button" class="submit_button" type="submit" value="Submit" />
+        </form>
+        <!-- pattern="^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$ -->
+        <!-- pattern="/^w+[+.w-]*@([w-]+.)*w+[w-]*.([a-z]{2,}|d+)$/i" -->
+        <p class="para_details">
+          By clicking the Sign Up button,you agree to our <br />
+          <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+        </p>
+        <!-- <p class="msg_not_display" id="not_filled">
+            Please fill all fileds
+        </p>
+        <p class="msg_not_display" id="password_not_match">
+            passwords don't match
+        </p> -->
+
+
+      </div>
+      <p  class="account_sentence para_details">
+        Already have an account? <a class="link_registration" href="./login.html">Login here</a>
+      </p>
+ 
+      <script type="text/javascript" src="./main.js"></script> 
+</body>
+</html>

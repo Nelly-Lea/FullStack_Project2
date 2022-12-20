@@ -1,0 +1,73 @@
+/*style de sign up et login*/
+
+.registration {
+    background-color: #344a72;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .signup-div {
+    width: 360px;
+    height: 620px;
+    margin: auto;
+    background-color: white;
+    border-radius: 3px;
+  }
+  
+  .login-div {
+    width: 360px;
+    height: 280px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: white;
+  }
+  
+  .page_title {
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  
+   .form_registration {
+    width: 300px;
+    margin-left: 20px;
+  }
+  
+  .title_label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .input_field {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+  }
+  .submit_button {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #49c1a2;
+    color: white;
+    font-size: 18px;
+  }
+  .para_details {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  .account_sentence {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: -10px;
+  }
+  .link_registration{
+    color: #49c1a2;
+  }
+  
+  
