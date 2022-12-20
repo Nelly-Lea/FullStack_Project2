@@ -4,21 +4,41 @@
     background-color: #344a72;
     font-family: "Roboto", sans-serif;
   }
-  
+  .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 100px; */
+  }
   .signup-div {
-    width: 360px;
-    height: 620px;
-    margin: auto;
+    width: 330px;
+    height: 520px;
+    /*margin: auto;*/
+    margin: 20px;
     background-color: white;
     border-radius: 3px;
   }
   
   .login-div {
-    width: 360px;
-    height: 280px;
-    margin: auto;
+    width: 330px;
+    height: 300px;
+    margin: 20px;
+    /*margin: auto;*/
+   
     border-radius: 3px;
     background-color: white;
+  }
+
+  #or_div{
+    display:block;
+    background-color: white;
+    border-radius: 3px;
+    width: 60px;
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
   }
   
   .page_title {
@@ -39,21 +59,23 @@
   }
   
   .input_field {
-    width: 100%;
+    width: 80%;
     padding: 7px;
     border: none;
     border: 1px solid gray;
     border-radius: 6px;
     outline: none;
+    
   }
   .submit_button {
-    width: 320px;
+    width: 280px;
     height: 35px;
     margin-top: 20px;
     border: none;
     background-color: #49c1a2;
     color: white;
     font-size: 18px;
+    
   }
   .para_details {
     text-align: center;
@@ -68,6 +90,12 @@
   }
   .link_registration{
     color: #49c1a2;
+  }
+
+  @media only screen and (max-width: 900px) {
+    #or_div{
+        display: none;
+    }
   }
   
   
