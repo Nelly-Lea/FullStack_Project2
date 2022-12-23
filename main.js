@@ -6,7 +6,7 @@ sign_up_button.addEventListener("click",sign_up);
 button_login.addEventListener("click", login);
  
 function sign_up(){
-   localStorage.removeItem('user1')
+   localStorage.removeItem('user1') //A ENLEVER
     
     var first_name=document.getElementById('fname_sign_up');
     var last_name=document.getElementById('lname_sign_up');
