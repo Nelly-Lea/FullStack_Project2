@@ -11,6 +11,18 @@ const words = ['maccabees', 'dreidel', 'miracle', 'doughnuts']; //les mots au ch
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
+var current_user=JSON.parse(localStorage.getItem('current_user'));
+var record={
+    game_id:2, // id=2 =>hangman game 
+    date:"",
+    win:"",
+}
+
+var name=current_user.firstname;
+
+const username_div= document.getElementById('hello_user');
+username_div.innerHTML="Hello "+name;
+
 const correctLetters = [];
 const wrongLetters = [];
 
@@ -36,6 +48,15 @@ function displayWord(){
     if(innerWord === selectedWord){ // si le mot trouve= au mot a chercher perdu
         finalMessage.innerText = 'Congratulations! You won! 😃';
         popup.style.display= 'flex';
+        record.date=new Date();
+        record.win="win";
+        current_user.records.push(record)
+        var username=current_user.email;
+        current_user.all_points++;
+        localStorage.removeItem(username);
+        localStorage.setItem(username, JSON.stringify (current_user));
+        localStorage.removeItem('current_user');
+        localStorage.setItem('current_user', JSON.stringify(current_user));
     }
 }
 
@@ -63,6 +84,15 @@ function updateWrongLetterE1(){ //si il ya au moins une erreur on affiche wrong+
     if(wrongLetters.length === figureParts.length){// si le nombre de mauvaise lettre= au nombre de parties a afficher =>perdu  
         finalMessage.innerText = 'Unfortunately you lost. 😕';
         popup.style.display = 'flex';
+        record.date=new Date();
+        record.win="lost";
+        current_user.records.push(record)
+        var username=current_user.email;
+        localStorage.removeItem(username);
+        localStorage.setItem(username, JSON.stringify (current_user));
+        localStorage.removeItem('current_user');
+        localStorage.setItem('current_user', JSON.stringify(current_user));
+    
     }
 }
 
@@ -113,6 +143,8 @@ playAgainBtn.addEventListener('click', () => {
     updateWrongLetterE1(); //on affiche aucune mauvaises lettres
 
     popup.style.display = 'none'; // cacher msg final
+    
+    current_user=JSON.parse(localStorage.getItem('current_user'));
 });
 
 displayWord();
