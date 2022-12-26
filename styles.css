@@ -1,5 +1,6 @@
 /*style de sign up et login*/
 
+/*
 .navbar {
   overflow: hidden;
   background-color:white;
@@ -22,7 +23,7 @@
 
     .navbar a:hover {
     color: #6563ff;
-    }
+    }*/
 
 .registration {
     background-color: #344a72;
@@ -304,22 +305,37 @@
 } */
 
 #hangman_body{
-  background-color: #4f345a;
+   background: #6563ff;
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
+  /* align-items: center;
+  justify-content: center; */
+  /* height: 80vh;
   margin: 0;
-  overflow: hidden;
+  overflow: hidden; */ */
+}
+#username_div_hangman{
+  float: right;
+  margin-right: 20px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
 }
 
 #hangman_title{
-  margin: 20px 0 0;
+  /* margin: 20px 0 0; */
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  font-weight: bold;
+  margin-left: 80px;
 }
 
+#desc_hangman{
+ justify-content: center;
+}
 .game-container{
   padding: 20px 30px;
   position: relative;
@@ -331,6 +347,7 @@
   border-color: white;
   border-radius: 5px;
   display: b;
+  justify-content: center;
 }
 
 .figure-container{
@@ -434,3 +451,136 @@
 .notification-container.show{
   transform: translateY(-50px);
 }
+
+@media screen and (max-width: 530px) {
+  #username_div_hangman{
+    justify-content: center;
+    align-items: center;
+    display:contents;
+  }
+  #hangman_title{
+    /* margin: 20px 0 0; */
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    
+  }
+}
+
+/*style menu page*/
+
+/* Navbar container */ 
+.navbar { 
+  overflow: hidden; 
+  background-color: #f7f5f7; 
+  margin: 10px; 
+  border-radius: 25px; 
+  
+} 
+ 
+/* Links inside the navbar */ 
+.navbar a { 
+  float: left; 
+  font-size: 20px; 
+  color: #5D5E60; 
+  text-align: center; 
+  padding: auto; 
+  text-decoration: none; 
+} 
+ 
+.navbarul { 
+  list-style-type: none; 
+  margin: 15; 
+  padding: 0; 
+  overflow: hidden; 
+} 
+ 
+.navbarul li { 
+  float: left; 
+  padding-left: 10px; 
+  padding-right: 10px; 
+} 
+ 
+.navbarul li a { 
+  display: block; 
+  text-align: center; 
+  padding-right:  16px; 
+  padding-left: 16px; 
+  text-decoration: none; 
+} 
+ 
+.navbarul li a:hover { 
+  background-color: rgb(194, 184, 223); 
+  border-radius: 25px; 
+} 
+.myheader{
+  display:inline-block;
+}
+
+#username_div{
+  float: right;
+  margin-right: 20px;
+  display:inline-block;
+  font-weight: bold;
+
+}
+ 
+/* menu page */ 
+.bodymenu{ 
+  background-color: #dacde4; 
+  font-family: 'Space Mono', monospace; 
+  margin: 20px; 
+} 
+ 
+/* Flex box in the menu page */ 
+.parent { 
+ /* display: flex; 
+  flex-wrap: wrap; 
+  align-content: space-around; 
+ */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+} 
+ 
+.child { 
+/*width: 150px;   
+height: 200px; 
+margin: auto; 
+font-size: 20px;   
+text-align: center; 
+padding: 25px; */
+
+margin: 10px;
+padding: 50px;
+font-size: 30px;
+
+} 
+ 
+.figure_menupage{ 
+width: 150px;   
+height: 200px; 
+margin: auto;  
+ 
+} 
+ 
+.img_game_menu { 
+/*max-height: 100%; 
+min-width: 100%; 
+
+object-fit: cover; 
+vertical-align: bottom; */
+/*border-radius: 25px; */
+/* height: 200px; 
+width: 200px; 
+border-radius: 25px; */
+object-fit: fill;
+height: 200px; 
+width: 200px; 
+border-radius: 25px;
+
+} 
+ 
+/* end style menu page */
