@@ -52,7 +52,7 @@ function displayWord(){
         record.win="win";
         current_user.records.push(record)
         var username=current_user.email;
-        current_user.all_points++;
+        current_user.all_points_hangman++;
         localStorage.removeItem(username);
         localStorage.setItem(username, JSON.stringify (current_user));
         localStorage.removeItem('current_user');

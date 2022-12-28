@@ -24,6 +24,60 @@
     .navbar a:hover {
     color: #6563ff;
     }*/
+    
+#title_homepage{
+  font-weight: bold;
+  font-size: 80px;
+  color: white;
+}    
+.slowFade {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  height: 45vh;
+ 
+  position: relative;
+}
+.slowFade .slide img {
+  position: absolute;
+  min-width: 100%;
+  max-height: 100%;
+  height: auto;
+  background: #000;
+  opacity: 0;
+  animation: slowFade 48s infinite;
+  justify-content: center;
+}
+.slowFade .slide:nth-child(2) img {
+          animation-delay: 8s;
+}
+.slowFade .slide:nth-child(3) img {
+  
+          animation-delay: 16s;
+}
+.slowFade .slide:nth-child(4) img {
+  animation-delay: 24s;
+      
+}
+.slowFade .slide:nth-child(5) img {
+  animation-delay: 32s;
+      
+}
+
+.slowFade .slide:nth-child(6) img {
+  animation-delay: 40s;
+      
+}
+@keyframes slowFade {
+  25% {
+      opacity: 1;
+      
+  }
+  40% {
+      opacity: 0;
+  }
+}
+
 
 .registration {
     background-color: #344a72;
@@ -314,7 +368,7 @@
   justify-content: center; */
   /* height: 80vh;
   margin: 0;
-  overflow: hidden; */ */
+  overflow: hidden; */ 
 }
 #username_div_hangman{
   float: right;
@@ -453,11 +507,12 @@
 }
 
 @media screen and (max-width: 530px) {
-  #username_div_hangman{
-    justify-content: center;
+  /* #username_div_hangman{
+    /* justify-content: center;
     align-items: center;
-    display:contents;
-  }
+    display:contents; 
+  
+  } */
   #hangman_title{
     /* margin: 20px 0 0; */
     justify-content: center;
@@ -514,6 +569,15 @@
   background-color: rgb(194, 184, 223); 
   border-radius: 25px; 
 } 
+#hello_user{
+  display: inline-block;
+}
+#log_out_icone{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+
+}
 .myheader{
   display:inline-block;
 }
@@ -582,5 +646,107 @@ width: 200px;
 border-radius: 25px;
 
 } 
+
+/* #all_record_participants{
+  border: solid;
+  border-color: black;
+  color: white;
+  
+} */
  
+
+table{
+  border:solid;
+  border-color: black;
+}
+td, th {
+border: 1px solid #dddddd;
+text-align: center;
+padding: 8px;
+}
 /* end style menu page */
+
+/*style contact_us*/
+#html_contact_us, #body_contact_us {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #666;
+  }
+  #contact_us_title {
+  margin: 0 0 20px;
+  font-weight: 400;
+  color: #1c87c9;
+  }
+  #msg_contact_us {
+  margin: 0 0 5px;
+  }
+  .main-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1c87c9;
+  }
+  #form_contact_us {
+  padding: 25px;
+  margin: 25px;
+  box-shadow: 0 2px 5px #f5f5f5; 
+  background: #f5f5f5; 
+  }
+  .fas {
+  margin: 25px 10px 0;
+  font-size: 72px;
+  color: #fff;
+  }
+  .fa-envelope {
+  transform: rotate(-20deg);
+  }
+  .fa-at , .fa-mail-bulk{
+  transform: rotate(10deg);
+  }
+  .input_contact_us, #textarea_contact_us {
+  width: calc(100% - 18px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #1c87c9;
+  outline: none;
+  }
+  .input_contact_us::placeholder {
+  color: #666;
+  }
+  #button_contact_us{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #1c87c9; 
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  }
+  #button_contact_us:hover {
+  background: #2371a0;
+  }    
+  @media (min-width: 568px) {
+  .main-block {
+  flex-direction: row;
+  }
+  .left-part, form {
+  width: 50%;
+  }
+  .fa-envelope {
+  margin-top: 0;
+  margin-left: 20%;
+  }
+  .fa-at {
+  margin-top: -10%;
+  margin-left: 65%;
+  }
+  .fa-mail-bulk {
+  margin-top: 2%;
+  margin-left: 28%;
+  }
+  }

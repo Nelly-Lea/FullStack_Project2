@@ -24,13 +24,15 @@ function sign_up(){
         user.password=password_sign_up.value;
         user.connection=[];
         user.records=[]
-        var all_points=0;
-        user.all_points=all_points;
+        var all_points_hangman=0;
+        user.all_points_hangman=all_points_hangman;
+        var all_points_memorie=0;
+        user.all_points_memorie=all_points_memorie;
         localStorage.setItem(email_sign_up.value, JSON.stringify(user));
         current_user=user;
         //rentrer dans la page jeux 
         localStorage.setItem('current_user', JSON.stringify(current_user));
-
+        //document.cookie=user;
     }
     else{
           if(first_name.value ==''|| last_name.value==''||email_sign_up.value=='' || password_sign_up.value=='' || password_sign_up_conf==''){// a enlever si submit button
@@ -86,6 +88,13 @@ function login(){
             localStorage.setItem(email_login.value,JSON.stringify(user));
             current_user=user;
             localStorage.setItem('current_user', JSON.stringify(current_user));
+            var now = new Date();
+            var time = now.getTime();
+            var expireTime = time + 1000*36000;
+            now.setTime(expireTime);
+            //document.cookie = 'cookie=ok;expires='+now.toUTCString()+';path=/';
+            //console.log(document.cookie);  // 'Wed, 31 Oct 2012 08:50:17 UTC'
+            document.cookie=email_login.value+"="+d+";expires="+now.toUTCString()+';path=/';
             //ouvrir une autre page -page des jeux
         }
     }
