@@ -29,6 +29,7 @@
   font-weight: bold;
   font-size: 80px;
   color: white;
+  font-family: 'Orbitron', sans-serif;
 }    
 .slowFade {
   display: flex;
@@ -42,6 +43,7 @@
   position: absolute;
   min-width: 100%;
   max-height: 100%;
+  width: 100%;
   height: auto;
   background: #000;
   opacity: 0;
@@ -80,49 +82,57 @@
 
 
 .registration {
-    background-color: #344a72;
-    font-family: "Roboto", sans-serif;
-  }
-  .flex-container{
+    /* background-color: #344a72;
+    font-family: "Roboto", sans-serif; */
+    font-family: 'Orbitron', sans-serif;
+    align-items: center;
+    justify-content: center;
+    background: #6563ff;
+}
+
+.flex-container{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     /* margin-left: 100px; */
-  }
-  .signup-div {
+}
+.signup-div {
     width: 330px;
     height: 520px;
     /*margin: auto;*/
     margin: 20px;
     background-color: white;
-    border-radius: 3px;
-  }
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
   
   .login-div {
     width: 330px;
     height: 300px;
     margin: 20px;
     /*margin: auto;*/
-   
-    border-radius: 3px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 20px;
     background-color: white;
   }
 
   #or_div{
     display:block;
     background-color: white;
-    border-radius: 3px;
+    border-radius: 10px;
     width: 60px;
     height: 45px;
     font-weight: bold;
     text-align: center;
     font-size: 35px;
+    font-family: 'Orbitron', sans-serif;
   }
   
   .page_title {
     text-align: center;
     padding-top: 15px;
+    font-family: 'Orbitron', sans-serif;
   }
   
   
@@ -135,6 +145,7 @@
     display: flex;
     margin-top: 20px;
     font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
   }
   
   .input_field {
@@ -151,10 +162,11 @@
     height: 35px;
     margin-top: 20px;
     border: none;
-    background-color: #49c1a2;
+    background-color: #8280f6;
     color: white;
     font-size: 18px;
-    
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
   }
   .para_details {
     text-align: center;
@@ -177,7 +189,7 @@
     }
   }
   
-  /*style memorie jeux*/
+  /*style memory game page*/
 
   /* Import Google Font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -187,6 +199,8 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+
 
 .myp{
   font-size: 20px;
@@ -226,6 +240,8 @@
   background: #f8f8f8;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  align-items: center;
+  justify-content: center;
 }
 .cards, .card, .view, .details, p{
   display: flex;
@@ -561,6 +577,7 @@
   text-align: center; 
   padding: auto; 
   text-decoration: none; 
+  font-family: 'Orbitron', sans-serif;
 } 
  
 .navbarul { 
@@ -585,7 +602,7 @@
 } 
  
 .navbarul li a:hover { 
-  background-color: rgb(194, 184, 223); 
+  background-color: rgb(189, 185, 200); 
   border-radius: 25px; 
 } 
 #hello_user{
@@ -599,6 +616,8 @@
 }
 .myheader{
   display:inline-block;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
 }
 
 #username_div{
@@ -611,9 +630,11 @@
  
 /* menu page */ 
 .bodymenu{ 
-  background-color: #dacde4; 
+  background: #6563ff;
   font-family: 'Space Mono', monospace; 
   margin: 20px; 
+  align-items: center;
+  justify-content: center;
 } 
  
 /* Flex box in the menu page */ 
@@ -660,8 +681,8 @@ vertical-align: bottom; */
 width: 200px; 
 border-radius: 25px; */
 object-fit: fill;
-height: 200px; 
-width: 200px; 
+height: 230px; 
+width: 230px; 
 border-radius: 25px;
 
 } 
@@ -817,3 +838,23 @@ padding: 8px;
     font-size: 80px;
     font-weight: bold;
   }
+  /* end style contact_us*/
+
+  /*style under_construction*/
+
+.backg {
+  height: 100%;
+}
+
+.bg {
+  /* Full-screen */
+  height: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  width: 100%;
+}
+ /*end style under_construction*/
