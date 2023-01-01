@@ -191,12 +191,31 @@
 .myp{
   font-size: 20px;
 }
+
+#username_div_memorie{
+  float: right;
+  margin-right: 20px;
+  font-weight: bold;
+  /*display: inline-block;*/
+  margin-top: 20px;
+  color: white;
+}
+
 .mybody{
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; */
+  background: #6563ff;
+}
+
+#memorie_game{
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: #6563ff;
+
 }
 ::selection{
   color: #fff;
@@ -749,4 +768,52 @@ padding: 8px;
   margin-top: 2%;
   margin-left: 28%;
   }
+  }
+
+  /* style memorie level 2*/
+  .wrapper2{
+    padding: 60px; 
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 200px 150px rgba(0,0,0,0.1);
+    border-color:white;
+  }
+
+  .cards2, .card, .view, .details, p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cards2{
+    height: 400px;
+    width: 400px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .cards2 .card{
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d; /* The transform-style CSS property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element. */
+    height: calc(100% / 4 - 10px); /* The calc() function lets you perform calculations when specifying CSS property values. */
+    width: calc(100% / 4 - 10px);
+  }
+  .cards2 .card .view{
+    width: 90%;
+    height: 90%;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    background: #fff;
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform 0.25s linear;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+
+  /*style my account page*/
+
+  #my_account_title{
+    font-size: 80px;
+    font-weight: bold;
   }

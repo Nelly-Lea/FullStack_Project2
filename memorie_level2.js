@@ -4,11 +4,8 @@ flipsTag = document.querySelector(".flips b"),
 refreshBtn = document.querySelector(".details button");
 
 const playAgainBtn = document.getElementById('play-button'); //ntm pr rejouer 
-const playAgainBtn1 = document.getElementById('play-button2'); //ntm passer de niveau
 const popup = document.getElementById('popup-container');// div pr final msg 
 const finalMessage = document.getElementById('final-message');// titre h2 final msg 
-const popup2 = document.getElementById('popup-container2');// div pr final msg 
-const finalMessage2 = document.getElementById('final-message2');// titre h2 final msg 
 var current_user=JSON.parse(localStorage.getItem('current_user'));
 var name=current_user.firstname;
 
@@ -36,7 +33,7 @@ function Record(game_id, date,win){
     this.date=date;
     this.win=win;
 }
-let maxTime = 40;
+let maxTime =30;
 let timeLeft = maxTime;
 let flips = 0;
 let matchedCard = 0; //the number of matched cards
@@ -47,7 +44,6 @@ let cardOne, cardTwo, timer;
 function initTimer() {
     if(timeLeft <= 0) {
         finalMessage.innerText = 'Unfortunately you lost. 😕';
-        playAgainBtn.innerHTML="Play Again"
         popup.style.display = 'flex';
         var new_record=new Record(1,new Date(),"lost");
         // new_record.date=new Date();
@@ -88,10 +84,9 @@ function flipCard({target: clickedCard}) { //clickedCard = e.target - getting us
 function matchCards(img1, img2) {
     if(img1 === img2) { //checks if the two images have the same src property
         matchedCard++;
-        if(matchedCard == 6 && timeLeft > 0) {
-            finalMessage2.innerText = 'Congratulations! You won! 😃';
-            popup2.style.display= 'flex';
-            playAgainBtn1.innerHTML="Pass to next level"
+        if(matchedCard == 8 && timeLeft > 0) {
+            finalMessage.innerText = 'Congratulations! You won! 😃';
+            popup.style.display= 'flex';
             // var new_record1=new record;
             // record.date=new Date();
             // record.win="win";
@@ -140,7 +135,7 @@ function shuffleCard() {
     disableDeck = isPlaying = false;
     
     //creating an array of 12 items and each item is repeated twice
-    let arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7,8];
     arr.sort(() => Math.random() > 0.5 ? 1 : -1); //sorting array items randomly
 
     //removing flip class from all cards and passing random image to each card
@@ -168,6 +163,3 @@ cards.forEach(card => {
 
 //Restart game and play again
 playAgainBtn.addEventListener('click', shuffleCard); 
-playAgainBtn1.addEventListener('click',() => {
-    window.location="./memorie_level2.html"
-});

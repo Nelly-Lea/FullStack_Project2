@@ -4,6 +4,7 @@ var button_login=document.getElementById("button_login")
 let essai=1;
 sign_up_button.addEventListener("click",sign_up);
 button_login.addEventListener("click", login);
+var link=document.getElementById("link_to_menu_page");
 
 var current_user=null;
 
@@ -32,6 +33,8 @@ function sign_up(){
         current_user=user;
         //rentrer dans la page jeux 
         localStorage.setItem('current_user', JSON.stringify(current_user));
+        //link.href="./menupage.html";
+        window.location="./menupage.html";
         //document.cookie=user;
     }
     else{
@@ -95,6 +98,8 @@ function login(){
             //document.cookie = 'cookie=ok;expires='+now.toUTCString()+';path=/';
             //console.log(document.cookie);  // 'Wed, 31 Oct 2012 08:50:17 UTC'
             document.cookie=email_login.value+"="+d+";expires="+now.toUTCString()+';path=/';
+            // link.href="./menupage.html";
+            window.location="./menupage.html";
             //ouvrir une autre page -page des jeux
         }
     }
@@ -120,6 +125,7 @@ function blocking(){
     document.getElementById("button_login").disabled = false;
    
 }
+
 
 //nellylea@gmail.com
 //Password1!
