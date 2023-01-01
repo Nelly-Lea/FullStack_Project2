@@ -4,7 +4,7 @@ const firstname = document.getElementById('firstname');
 firstname.innerHTML=current_user.firstname;
 
 const lastname = document.getElementById('lastname'); 
-lastname.innerHTML=current_user.lastname;
+lastname.innerHTML=current_user.last_name;
 
 const email = document.getElementById('email'); 
 email.innerHTML=current_user.email;
@@ -12,11 +12,20 @@ email.innerHTML=current_user.email;
 const password = document.getElementById('password'); 
 password.innerHTML=current_user.password;
 
-const last_connection = document.getElementById('last_connection'); 
-var index=current_user.connection.length-1;
-var last_connec=current_user.connection[index];
+// const last_connection = document.getElementById('last_connection'); 
+// var index=current_user.connection.length-1;
+// var last_connec=current_user.connection[index];
 
-last_connection.innerHTML=last_connec;
+var last_connect=document.getElementById('last_connection')
+let cookie = {};
+document.cookie.split(';').forEach(function(el) {
+  let [key,value] = el.split('=');
+  cookie[key.trim()] = value;
+})
+var last_connec_date= cookie[current_user.email]
+last_connect.innerHTML=last_connec_date;
+
+//last_connection.innerHTML=last_connec;
 
 const total_points_memory = document.getElementById('total_points_memory'); 
 total_points_memory.innerHTML=current_user.all_points_memorie;

@@ -200,7 +200,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
+#menu_img{
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin: 10px;
+}
 
 .myp{
   font-size: 20px;
@@ -210,7 +215,7 @@
   float: right;
   margin-right: 20px;
   font-weight: bold;
-  /*display: inline-block;*/
+  display: inline-block;
   margin-top: 20px;
   color: white;
 }
@@ -230,6 +235,16 @@
   min-height: 100vh;
   background: #6563ff;
 
+}
+
+#memory_title{
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  font-weight: bold;
+  margin-left: 110px;
+  color: white;
+ 
 }
 ::selection{
   color: #fff;
@@ -476,7 +491,7 @@
 }
 
 .letter{
-  border-bottom: 3px solid #2980b9;
+  border-bottom: 3px solid white;
   display: inline-flex;
   font-size: 30px;
   align-items: center;
@@ -858,3 +873,47 @@ padding: 8px;
   width: 100%;
 }
  /*end style under_construction*/
+
+ /*style memorie level 3*/
+ .wrapper3{
+  padding: 150px; 
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 200px 150px rgba(0,0,0,0.1);
+  border-color:white;
+}
+
+.cards3, .card, .view, .details, p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards3{
+  height: 400px;
+  width: 400px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cards3 .card{
+  cursor: pointer;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d; /* The transform-style CSS property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element. */
+  height: calc(100% / 4 - 10px); /* The calc() function lets you perform calculations when specifying CSS property values. */
+  width: calc(100% / 4 - 10px);
+}
+.cards3 .card .view{
+  width: 90%;
+  height: 90%;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  background: #fff;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  transition: transform 0.25s linear;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}

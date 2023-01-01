@@ -3,9 +3,16 @@ timeTag = document.querySelector(".time b"),
 flipsTag = document.querySelector(".flips b"),
 refreshBtn = document.querySelector(".details button");
 
-const playAgainBtn = document.getElementById('play-button'); //ntm pr rejouer 
+const playAgainBtn = document.getElementById('play-button'); //btn pr rejouer 
+const playAgainBtn1 = document.getElementById('play-button2'); //btn passer de niveau
+
 const popup = document.getElementById('popup-container');// div pr final msg 
 const finalMessage = document.getElementById('final-message');// titre h2 final msg 
+const popup2 = document.getElementById('popup-container2');// div pr final msg 
+const finalMessage2 = document.getElementById('final-message2');// titre h2 final msg 
+//const playAgainBtn = document.getElementById('play-button'); //ntm pr rejouer 
+//const popup = document.getElementById('popup-container');// div pr final msg 
+//const finalMessage = document.getElementById('final-message');// titre h2 final msg 
 var current_user=JSON.parse(localStorage.getItem('current_user'));
 var name=current_user.firstname;
 
@@ -33,7 +40,7 @@ function Record(game_id, date,win){
     this.date=date;
     this.win=win;
 }
-let maxTime =30;
+let maxTime =40;
 let timeLeft = maxTime;
 let flips = 0;
 let matchedCard = 0; //the number of matched cards
@@ -44,6 +51,8 @@ let cardOne, cardTwo, timer;
 function initTimer() {
     if(timeLeft <= 0) {
         finalMessage.innerText = 'Unfortunately you lost. 😕';
+        //popup.style.display = 'flex';
+        playAgainBtn.innerHTML="Play Again"
         popup.style.display = 'flex';
         var new_record=new Record(1,new Date(),"lost");
         // new_record.date=new Date();
@@ -85,8 +94,12 @@ function matchCards(img1, img2) {
     if(img1 === img2) { //checks if the two images have the same src property
         matchedCard++;
         if(matchedCard == 8 && timeLeft > 0) {
-            finalMessage.innerText = 'Congratulations! You won! 😃';
-            popup.style.display= 'flex';
+            finalMessage2.innerText = 'Congratulations! You won! 😃';
+            popup2.style.display= 'flex';
+            playAgainBtn1.innerHTML="Pass to next level"
+            //finalMessage.innerText = 'Congratulations! You won! 😃';
+            //popup.style.display= 'flex';
+            
             // var new_record1=new record;
             // record.date=new Date();
             // record.win="win";
@@ -162,4 +175,8 @@ cards.forEach(card => {
 
 
 //Restart game and play again
+//playAgainBtn.addEventListener('click', shuffleCard); 
 playAgainBtn.addEventListener('click', shuffleCard); 
+playAgainBtn1.addEventListener('click',() => {
+    window.location="./memorie_level3.html"
+});
