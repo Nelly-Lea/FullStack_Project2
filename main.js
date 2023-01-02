@@ -62,6 +62,7 @@ function login(){
     if(essai==max_essai) //si on a est arrive a 3 essais on bloque les fields
     { 
         setTimeout(blocking,  30000);
+        alert("you are blocked for 30 seconds");
         document.getElementById("email_login").disabled = true;
         document.getElementById("password_login").disabled = true;
         document.getElementById("button_login").disabled = true;
@@ -73,9 +74,10 @@ function login(){
     {
         if(password.value!=user.password)// si le user s'est trompe de password
         {
-            
-            var s="error in password,you have "+essai_again+" tries left ";
-            alert(s)
+            if(essai_again!=0){
+              var s="error in password,you have "+essai_again+" tries left ";
+              alert(s)
+            }
         }
         else{ // bon user 
             var d=new Date();
@@ -119,7 +121,7 @@ function login(){
 }
 
 function blocking(){
-    alert("you are blocked for 30 seconds");
+    alert("you can try to login");
     document.getElementById("email_login").disabled = false;
     document.getElementById("password_login").disabled = false;
     document.getElementById("button_login").disabled = false;
