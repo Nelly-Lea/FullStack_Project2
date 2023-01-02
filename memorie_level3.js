@@ -18,16 +18,7 @@ var record={
     win:"",
 }
 
-// function user(points_hangman, points_memorie, connec, email, first, last, password, record) {
-//     this.all_points_hangman=points_hangman;
-//     this.all_points_memorie=points_memorie;
-//     this.connection=connec;
-//     this.email=email;
-//     this.firstName = first;
-//     this.lastName = last;
-//     this.password = password;
-//     this.eyeColor = eye;
-//   }
+
 function Record(game_id, date,win){
     this.game_id=game_id;
     this.date=date;
@@ -87,9 +78,6 @@ function matchCards(img1, img2) {
         if(matchedCard == 8 && timeLeft > 0) {
             finalMessage.innerText = 'Congratulations! You won! 😃';
             popup.style.display= 'flex';
-            // var new_record1=new record;
-            // record.date=new Date();
-            // record.win="win";
             var new_record1=new Record(1,new Date(),"win");
             current_user.records.push(new_record1)
             var username=current_user.email;

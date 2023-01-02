@@ -3,8 +3,8 @@ timeTag = document.querySelector(".time b"),
 flipsTag = document.querySelector(".flips b"),
 refreshBtn = document.querySelector(".details button");
 
-const playAgainBtn = document.getElementById('play-button'); //ntm pr rejouer 
-const playAgainBtn1 = document.getElementById('play-button2'); //ntm passer de niveau
+const playAgainBtn = document.getElementById('play-button'); //btn to play again 
+const playAgainBtn1 = document.getElementById('play-button2'); //btm to pass to the next level
 const popup = document.getElementById('popup-container');// div pr final msg 
 const finalMessage = document.getElementById('final-message');// titre h2 final msg 
 const popup2 = document.getElementById('popup-container2');// div pr final msg 
@@ -21,16 +21,7 @@ var record={
     win:"",
 }
 
-// function user(points_hangman, points_memorie, connec, email, first, last, password, record) {
-//     this.all_points_hangman=points_hangman;
-//     this.all_points_memorie=points_memorie;
-//     this.connection=connec;
-//     this.email=email;
-//     this.firstName = first;
-//     this.lastName = last;
-//     this.password = password;
-//     this.eyeColor = eye;
-//   }
+
 function Record(game_id, date,win){
     this.game_id=game_id;
     this.date=date;
@@ -50,8 +41,7 @@ function initTimer() {
         playAgainBtn.innerHTML="Play Again"
         popup.style.display = 'flex';
         var new_record=new Record(1,new Date(),"lost");
-        // new_record.date=new Date();
-        // new_record.win="lost";
+
         current_user.records.push(new_record)
         var username=current_user.email;
         localStorage.removeItem(username);
@@ -92,9 +82,7 @@ function matchCards(img1, img2) {
             finalMessage2.innerText = 'Congratulations! You won! 😃';
             popup2.style.display= 'flex';
             playAgainBtn1.innerHTML="Pass to next level"
-            // var new_record1=new record;
-            // record.date=new Date();
-            // record.win="win";
+
             var new_record1=new Record(1,new Date(),"win");
             current_user.records.push(new_record1)
             var username=current_user.email;
@@ -167,7 +155,7 @@ cards.forEach(card => {
 
 
 //Restart game and play again
-playAgainBtn.addEventListener('click', shuffleCard); 
+playAgainBtn.addEventListener('click', shuffleCard);  // to play again same level
 playAgainBtn1.addEventListener('click',() => {
     window.location="./memorie_level2.html"
-});
+}); // to pass to next level
