@@ -718,6 +718,7 @@ td, th {
 border: 1px solid #dddddd;
 text-align: center;
 padding: 8px;
+font-family: 'Orbitron', sans-serif;
 }
 /* end style menu page */
 
@@ -859,9 +860,25 @@ padding: 8px;
 
   /*style my account page*/
 
+  .my_account_body {
+    background: #6563ff;
+    font-family: 'Orbitron', sans-serif;
+    margin: 20px; 
+    align-items: center;
+    justify-content: center;
+  }
+
+  .my_account_div div label {
+    font-family: 'Orbitron', sans-serif;
+  }
+
   #my_account_title{
     font-size: 80px;
     font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #firstname, #lastname, #email, #password, #last_connection, #total_points_memory, #total_points_hangman {
+    color: white;
   }
   /* end style contact_us*/
 
