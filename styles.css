@@ -34,7 +34,7 @@
 .slowFade {
   display: flex;
   align-items: flex-start;
-  background: #fff;
+  /* background: #fff; */
   height: 45vh;
  
   position: relative;
@@ -219,6 +219,25 @@
   margin-top: 20px;
   color: white;
 }
+
+@media screen and (max-width: 530px) {
+  #username_div_memorie{
+    display: inline-block;
+    /* margin-top: 150px; */
+    /* margin-right: 100px; */
+   
+  }
+  #menu_img{
+    width: 30px;
+    height: 30px;
+    /* float: right; */
+    /* margin-top: 170px; */
+    display: inline-block;
+     margin-left: 200px; 
+    
+}
+}
+
 
 .mybody{
   /* display: flex;
@@ -877,7 +896,8 @@ font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     font-family: 'Orbitron', sans-serif;
   }
-  #firstname, #lastname, #email, #password, #last_connection, #total_points_memory, #total_points_hangman {
+  #firstname, #lastname, #email, #password, #last_connection, #total_points_memory, #total_points_hangman, #level_memory,
+  #num_win_memory, #num_lost_memory, #num_win_hangman, #num_lost_hangman {
     color: white;
   }
   /* end style contact_us*/

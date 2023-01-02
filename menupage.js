@@ -6,6 +6,24 @@ username_div.innerHTML="Hello "+name;
 
 var all_record_participant_div=document.getElementById('all_record_participants');
 
+var link_to_memory_level=document.getElementById('memory_game_level');
+link_to_memory_level.addEventListener("click", memory_level);
+
+function memory_level(){
+    const total_points_memory=current_user.all_points_memorie;
+    if(total_points_memory==0){
+      window.location="./index.html";
+    }
+    else{
+      if(total_points_memory==1){
+        window.location="./memorie_level2.html";
+       }
+      else{
+       window.location="./memorie_level3.html";
+     }
+    }
+}
+
 var log_out_icone=document.getElementById("log_out_icone")
 log_out_icone.addEventListener("click",log_out);
 function log_out(){
@@ -61,9 +79,9 @@ last_connect.innerHTML=last_connec_date;
 // SET THE TABLE ID.
 // WE WOULD NEED THE ID TO TRAVERSE AND EXTRACT DATA FROM THE TABLE.
 //table.setAttribute('id', 'recordTable');
-
+  
 var arrHead = new Array();
-arrHead = ['Name', 'Email', 'Total Points Hangman Game', 'Total Points Memorie Game'];
+arrHead = ['Name', 'Email', 'Total Points Hangman Game', 'Total Points Memory Game', 'Level in Memory Game'];
 
 var values2 = [],
     keys = Object.keys(localStorage),
@@ -90,8 +108,7 @@ while ( i-- ) {
 
 var table = document.createElement("TABLE");  //makes a table element for the page
 
-
-        
+     
 for(var i = 0; i < values2.length; i++) {
     var row = table.insertRow(i);
     var user=JSON.parse(values2[i]);
@@ -99,6 +116,18 @@ for(var i = 0; i < values2.length; i++) {
     row.insertCell(1).innerHTML =user.email;
     row.insertCell(2).innerHTML = user.all_points_hangman;
     row.insertCell(3).innerHTML = user.all_points_memorie;
+    if(user.all_points_memorie==0)
+    {
+      row.insertCell(4).innerHTML = 'level 1';
+    }
+    else{
+      if(user.all_points_memorie==1){
+        row.insertCell(4).innerHTML = 'level 2';
+    }
+      else{
+        row.insertCell(4).innerHTML = 'level 3';
+    }
+   }
 }
 
 var header = table.createTHead();
@@ -107,4 +136,5 @@ for(var i = 0; i <arrHead.length; i++) {
     headerRow.insertCell(i).innerHTML = arrHead[i];
 }
 all_record_participant_div.appendChild(table)
+
 

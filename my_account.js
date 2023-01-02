@@ -28,7 +28,57 @@ last_connect.innerHTML=last_connec_date;
 //last_connection.innerHTML=last_connec;
 
 const total_points_memory = document.getElementById('total_points_memory'); 
-total_points_memory.innerHTML=current_user.all_points_memorie;
+const total_point_mem=current_user.all_points_memorie
+total_points_memory.innerHTML=total_point_mem;
+
+const level_memory = document.getElementById('level_memory'); 
+if(total_point_mem==0)
+{
+    level_memory.innerHTML = 'level 1';
+}
+else{
+  if(total_point_mem==1){
+    level_memory.innerHTML = 'level 2';
+}
+  else{
+    level_memory.innerHTML = 'level 3';
+}
+}
+const number_win_memory = document.getElementById('num_win_memory'); 
+const number_lost_memory=document.getElementById('num_lost_memory');
+
+const number_win_hangman = document.getElementById('num_win_hangman'); 
+const number_lost_hangman=document.getElementById('num_lost_hangman');
+var array_win=current_user.records;
+console.log(array_win)
+var counter_win_memory=0;
+var counter_lost_memory=0;
+var counter_win_hangman=0;
+var counter_lost_hangman=0;
+for(const item of array_win){
+    if(item.win=="win"&& item.game_id==1){
+        counter_win_memory++;
+    }
+    else{
+        if(item.win=="lost"&& item.game_id==1){
+            counter_lost_memory++;
+        }
+        else{
+            if(item.win=="win"&&item.game_id==2){
+               counter_win_hangman++;
+            }
+            else{
+                counter_lost_hangman++;
+            }
+        }
+        
+    }
+}
+number_win_memory.innerHTML=counter_win_memory;
+number_lost_memory.innerHTML=counter_lost_memory;
+
+number_win_hangman.innerHTML=counter_win_hangman;
+number_lost_hangman.innerHTML=counter_lost_hangman;
 
 const total_points_hangman = document.getElementById('total_points_hangman'); 
 total_points_hangman.innerHTML=current_user.all_points_hangman;
