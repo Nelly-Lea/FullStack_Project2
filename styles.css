@@ -259,11 +259,12 @@
 #memory_title{
   justify-content: center;
   align-items: center;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bold;
   margin-left: 110px;
+  padding-top: 20px;
   color: white;
- 
+  font-family: 'Orbitron', sans-serif;
 }
 ::selection{
   color: #fff;
@@ -451,9 +452,12 @@
   /* margin: 20px 0 0; */
   justify-content: center;
   align-items: center;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bold;
   margin-left: 80px;
+  font-family: 'Orbitron', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 #desc_hangman{
@@ -672,6 +676,13 @@
 } 
  
 /* Flex box in the menu page */ 
+/* figure {
+  width: 300px;  
+  height: 400px;
+  margin: auto; 
+  
+} */
+
 .parent { 
  /* display: flex; 
   flex-wrap: wrap; 
@@ -715,8 +726,10 @@ vertical-align: bottom; */
 width: 200px; 
 border-radius: 25px; */
 object-fit: fill;
-height: 230px; 
-width: 230px; 
+height: 225px; 
+width: 225px; 
+/* max-height: 100%;
+min-width: 100%; */
 border-radius: 25px;
 
 } 
@@ -887,14 +900,22 @@ font-family: 'Orbitron', sans-serif;
     justify-content: center;
   }
 
+  .my_account_div {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
   .my_account_div div label {
     font-family: 'Orbitron', sans-serif;
+    align-items: center;
   }
 
   #my_account_title{
     font-size: 80px;
     font-weight: bold;
     font-family: 'Orbitron', sans-serif;
+    margin: 20px;
   }
   #firstname, #lastname, #email, #password, #last_connection, #total_points_memory, #total_points_hangman, #level_memory,
   #num_win_memory, #num_lost_memory, #num_win_hangman, #num_lost_hangman {
