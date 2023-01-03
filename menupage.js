@@ -38,43 +38,9 @@ let cookie = {};
 document.cookie.split(';').forEach(function(el) {
   let [key,value] = el.split('=');
   cookie[key.trim()] = value;
-})
+}) // trim enleve les espace 
 var last_connec_date= cookie[current_user.email]
 last_connect.innerHTML=last_connec_date;
-// const items={...localStorage}
-// console.log(items)
-
-// var values = [],
-//     keys = Object.keys(localStorage),
-//     i = keys.length;
-// var ul = document.createElement("ul");
-// while ( i-- ) {
-//     if(keys[i]!="current_user"){
-//       //values.push( localStorage.getItem(keys[i]) );
-//       let li = document.createElement("li");
-//       var user=JSON.parse(localStorage.getItem(keys[i]));
-//       var name_user=user.firstname; 
-//       var email=user.email;
-//       var all_points=user.all_points;
-//       li.innerHTML = name_user+" "+email+" wins "+all_points+" games"; 
-//       ul.appendChild(li); 
-//     }
-// }
-
-// console.log(values)
-
-
-// // for (let i of values) { 
-// //     let li = document.createElement("li");
-// //     var user=i;
-// //     var name_user=i["firstname"]; 
-// //     li.innerHTML = name_user; 
-// //     ol.appendChild(li); 
-// // }
-// all_record_participant_div.appendChild(ul)
-
-
-//var table = document. createElement('table');
 
 // SET THE TABLE ID.
 // WE WOULD NEED THE ID TO TRAVERSE AND EXTRACT DATA FROM THE TABLE.
@@ -90,21 +56,9 @@ var values2 = [],
 while ( i-- ) {
     if(keys[i]!="current_user"){
       values2.push( localStorage.getItem(keys[i]) );
-    //   let li = document.createElement("li");
-    //   var user=JSON.parse(localStorage.getItem(keys[i]));
-    //   var name_user=user.firstname; 
-    //   var email=user.email;
-    //   var all_points=user.all_points;
-    //   li.innerHTML = name_user+" "+email+" wins "+all_points+" games"; 
-    //   ul.appendChild(li); 
     }
 }
 
-
-// var arrValue = new Array();
-// arrValue. push(['1', 'Green Field', 'Accountant']);
-// arrValue.push(['2', 'Arun Banik', 'Project Manager']);
-// arrValue.push(['3', 'Dewane Paul', 'Programmer']);
 
 var table = document.createElement("TABLE");  //makes a table element for the page
 

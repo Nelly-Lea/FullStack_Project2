@@ -3,16 +3,14 @@ timeTag = document.querySelector(".time b"),
 flipsTag = document.querySelector(".flips b"),
 refreshBtn = document.querySelector(".details button");
 
-const playAgainBtn = document.getElementById('play-button'); //btn pr rejouer 
-const playAgainBtn1 = document.getElementById('play-button2'); //btn passer de niveau
+const playAgainBtn = document.getElementById('play-button'); //btn to play again 
+const playAgainBtn1 = document.getElementById('play-button2'); //btn to pass to the next level
 
 const popup = document.getElementById('popup-container');// div pr final msg 
 const finalMessage = document.getElementById('final-message');// titre h2 final msg 
 const popup2 = document.getElementById('popup-container2');// div pr final msg 
 const finalMessage2 = document.getElementById('final-message2');// titre h2 final msg 
-//const playAgainBtn = document.getElementById('play-button'); //ntm pr rejouer 
-//const popup = document.getElementById('popup-container');// div pr final msg 
-//const finalMessage = document.getElementById('final-message');// titre h2 final msg 
+
 var current_user=JSON.parse(localStorage.getItem('current_user'));
 var name=current_user.firstname;
 
@@ -25,16 +23,7 @@ var record={
     win:"",
 }
 
-// function user(points_hangman, points_memorie, connec, email, first, last, password, record) {
-//     this.all_points_hangman=points_hangman;
-//     this.all_points_memorie=points_memorie;
-//     this.connection=connec;
-//     this.email=email;
-//     this.firstName = first;
-//     this.lastName = last;
-//     this.password = password;
-//     this.eyeColor = eye;
-//   }
+
 function Record(game_id, date,win){
     this.game_id=game_id;
     this.date=date;
@@ -97,12 +86,7 @@ function matchCards(img1, img2) {
             finalMessage2.innerText = 'Congratulations! You won! 😃';
             popup2.style.display= 'flex';
             playAgainBtn1.innerHTML="Pass to next level"
-            //finalMessage.innerText = 'Congratulations! You won! 😃';
-            //popup.style.display= 'flex';
-            
-            // var new_record1=new record;
-            // record.date=new Date();
-            // record.win="win";
+           
             var new_record1=new Record(1,new Date(),"win");
             current_user.records.push(new_record1)
             var username=current_user.email;
@@ -176,7 +160,7 @@ cards.forEach(card => {
 
 //Restart game and play again
 //playAgainBtn.addEventListener('click', shuffleCard); 
-playAgainBtn.addEventListener('click', shuffleCard); 
+playAgainBtn.addEventListener('click', shuffleCard); // to play again
 playAgainBtn1.addEventListener('click',() => {
     window.location="./memorie_level3.html"
-});
+}); // to pass to the next level
