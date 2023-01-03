@@ -10,8 +10,6 @@ var current_user=null;
 
  
 function sign_up(){
-   localStorage.removeItem('user1') //A ENLEVER
-    
     var first_name=document.getElementById('fname_sign_up');
     var last_name=document.getElementById('lname_sign_up');
     var email_sign_up=document.getElementById('email_sign_up');
@@ -61,8 +59,8 @@ function login(){
     var user=JSON.parse(localStorage.getItem( email_login.value));
     if(essai==max_essai) //si on a est arrive a 3 essais on bloque les fields
     { 
-        setTimeout(blocking,  30000);
-        alert("you are blocked for 30 seconds");
+        setTimeout(blocking,  15000);
+        alert("you are blocked for 15 seconds");
         document.getElementById("email_login").disabled = true;
         document.getElementById("password_login").disabled = true;
         document.getElementById("button_login").disabled = true;
