@@ -58,12 +58,12 @@ function initTimer() {
 function flipCard({target: clickedCard}) { //clickedCard = e.target - getting user clicked card
     if(!isPlaying) {
         isPlaying = true;
-        timer = setInterval(initTimer, 1000);
+        timer = setInterval(initTimer, 1000); // ca commence
     }
     if(clickedCard !== cardOne && !disableDeck && timeLeft > 0) {
         flips++;
         flipsTag.innerText = flips;
-        clickedCard.classList.add("flip"); //adding flip class to clicked card
+        clickedCard.classList.add("flip"); //adding flip class to clicked card , faire tourner la carte
         if(!cardOne) { //the first card clicked, assigned to cardOne
             return cardOne = clickedCard;
         }
@@ -102,13 +102,13 @@ function matchCards(img1, img2) {
     //if two cards don't match
     setTimeout(() => {
         //adding shake class to both cards after 400ms
-        cardOne.classList.add("shake");
+        cardOne.classList.add("shake"); // carte qui bouge
         cardTwo.classList.add("shake");
     }, 400);
 
     setTimeout(() => {
         //removing flip and shake class after 1.2 seconds
-        cardOne.classList.remove("shake", "flip");
+        cardOne.classList.remove("shake", "flip"); 
         cardTwo.classList.remove("shake", "flip");
         cardOne = cardTwo = ""; //setting both cards value to blank
         disableDeck = false;
