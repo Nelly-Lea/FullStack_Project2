@@ -19,7 +19,7 @@ In this game, the player must flip two cards at a time and attempt to match all 
 
 **Hangman Game**
 
-The second game is a hangman-style game. Players aim to guess a hidden word by selecting letters. However, with each incorrect guess, a part of the hangman is added. The objective is to discover all the letters in the word before the hangman's drawing is complete. If the drawing is finished and the word remains undiscovered, the player loses. Players have the option to play as many times as they desire.
+In this game players aim to guess a hidden word by selecting letters. However, with each incorrect guess, a part of the hangman is added. The objective is to discover all the letters in the word before the hangman's drawing is complete. If the drawing is finished and the word remains undiscovered, the player loses. Players have the option to play as many times as they desire.
 
 In both games, each time the player wins, their score increases by one point.
 
